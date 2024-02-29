@@ -1,0 +1,12 @@
+<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<path id="Star" fill-rule="evenodd" clip-rule="evenodd" d="M19.4855 40.7249L13.7878 42.0778L11.9158 36.5289L6.30495 34.8517L7.4582 29.1102L3.43767 24.8523L7.30715 20.4567L5.95423 14.759L11.5031 12.887L13.1803 7.27615L18.9218 8.4294L23.1797 4.40887L27.5753 8.27835L33.2731 6.92543L35.145 12.4743L40.7559 14.1515L39.6026 19.893L43.6232 24.1509L39.7537 28.5465L41.1066 34.2443L35.5577 36.1162L33.8805 41.7271L28.139 40.5738L23.8811 44.5944L19.4855 40.7249Z" fill="url(#paint0_linear_0_535)"/>
+<path id="Path 14" d="M16.7787 25.578L21.6504 29.8407L32.6117 18.8794" stroke="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_535" x1="54.0466" y1="26.6002" x2="28.8259" y2="-1.75619" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CDCDD1"/>
+<stop offset="1" stop-color="#E2E3E7"/>
+</linearGradient>
+</defs>
+</svg>
