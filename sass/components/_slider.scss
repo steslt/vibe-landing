@@ -1,9 +1,6 @@
 .titles {
     
     &__wrapper {
-        @include small-tablet {
-            // max-height: 125px;
-        }
         @include desktop {
             margin-top: 50px;
         }
