@@ -1,0 +1,73 @@
+.burger-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background: var(--general-bg);
+    border-radius: 50%;
+    transition: var(--transition);
+
+    @include desktop {
+        display: flex;
+        position: fixed;
+    }
+
+
+    span {
+        position: relative;
+        display: flex;
+        width: 30px;
+        height: 3px;
+        border-radius: 100px;
+        background: var(--general-text2);
+        transition: var(--transition);
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            border-radius: 100px;
+            background: var(--general-text2);
+            transition: var(--transition);
+            top: -8px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            border-radius: 100px;
+            background: var(--general-text2);
+            transition: var(--transition);
+            bottom: -8px;
+
+        }
+    }
+    &.burger--opened{
+        background: none;
+
+        span{
+            display: block;
+        }   
+
+        span::before{
+            background: var(--general-bg);
+            transform: rotate(-45deg);
+            top: 0;
+        }
+        span::after{
+            background: var(--general-bg);
+            transform: rotate(45deg);
+            bottom: 0;
+        }
+    }
+}
+

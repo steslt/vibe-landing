@@ -1,0 +1,145 @@
+.footer {
+    margin-top: 200px;
+    z-index: 1;
+    border-top: 1px solid var(--border-color);
+    background: var(--accent-bg);
+    padding: 125px 0 100px;
+
+    @include desktop {
+        padding: 100px 0 80px;
+    }
+
+    @include tablet {
+        padding: 50px 0 50px;
+    }
+    @include mobile{
+        margin-top: 100px;
+    }
+
+    &__inner {
+        display: grid;
+        justify-content: space-between;
+        gap: 20px;
+        grid-template-columns: auto 2fr 1fr 1fr;
+
+        @include small-tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        @include medium-mobile {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    &__col {
+        @include medium-mobile {
+            text-align: center;
+        }
+    }
+
+    &__col-tel {
+        @extend %flex-all-center;
+        flex-direction: column;
+
+        height: 100%;
+        font-weight: 500;
+        font-style: normal;
+
+        @include small-tablet {
+            align-items: start;
+        }
+
+        @include medium-mobile {
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__col-number {
+        @include adaptive-font(27, 20);
+        line-height: 0.9;
+        @extend %hover-text;
+    }
+
+    &__col-text {
+        @include adaptive-font(14, 11);
+        @extend %flex-aline-center;
+        color: var(--accent-text3);
+        line-height: 1.8;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    &__col-link {
+        white-space: nowrap;
+        text-transform: uppercase;
+        line-height: 2.5;
+        font-weight: 500;
+        @include adaptive-font(16, 13);
+
+        @extend %hover-text;
+    }
+
+    &__policy {
+        text-align: center;
+        margin-top: 100px;
+
+        @include desktop {
+            margin-top: 80px;
+        }
+
+        @include tablet {
+            margin-top: 50px;
+        }
+
+        div {
+            margin-bottom: 10px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(165, 165, 179, 0.05) 0%, rgba(165, 165, 179, 0.17) 50%, rgba(165, 165, 179, 0.05) 100%);
+        }
+    }
+
+    &__policy-text {
+        color: var(--border-color);
+        transition: var(--transition);
+
+        &:hover {
+            color: #808088;
+        }
+    }
+}
+
+.socials {
+
+    &__list {
+        margin-top: 32px;
+        display: flex;
+
+        @include medium-mobile {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+
+        @extend %flex-all-center;
+        margin-left: 18px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        & path {
+            fill: var(--accent-text);
+        }
+
+        @extend %hover-svg;
+
+    }
+}
