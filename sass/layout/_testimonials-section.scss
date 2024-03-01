@@ -662,6 +662,9 @@
       @include big-desktop{
          margin: 20px auto;
       }
+      @include big-mobile{
+         margin-left: 10px;
+      }
    }
    &__slider-phone-slide {
       transition: var(--transition);
