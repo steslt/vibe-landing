@@ -1,0 +1,294 @@
+.map {
+    margin-top: 100px;
+    background: url('../img/content/rooms/room3.png') no-repeat 110% 50%;
+
+    @include desktop {
+        margin-top: 20px;
+    }
+
+    @include big-mobile {
+        background-position-x: 30%;
+    }
+
+    &__title {
+        @extend %title-style;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-top: 60px;
+        gap: 90px;
+
+        @include desktop {
+            gap: 100px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        @include medium-tablet {
+            gap: 0;
+        }
+
+        @include big-mobile {
+            margin-top: 10px;
+        }
+    }
+
+    &__info {
+        max-width: 390px;
+
+        @include desktop {
+            max-width: 290px;
+        }
+
+        @include tablet {
+            order: 2;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__info-text {
+        margin-top: 40px;
+        @include adaptive-font(20, 16);
+        line-height: 1.5;
+        color: var(--general-text2);
+
+        @include tablet {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        span {
+            color: var(--accent-span);
+        }
+    }
+
+    &__info-btn {
+        margin-top: 20px;
+        @include submit-btn(380px, 95px);
+
+        @include desktop {
+            width: 300px;
+            height: 70px;
+
+            img {
+                margin-left: 5px;
+            }
+        }
+
+        @include tablet {
+            margin: 20px auto 0 auto;
+        }
+    }
+
+    &__content {
+        @include tablet {
+            margin: 0 auto;
+        }
+
+        @include big-mobile {
+            margin: 0;
+        }
+
+        iframe {
+            margin-left: 30px;
+            transition: var(--transition);
+
+            &:hover {
+                filter: drop-shadow(0px 0px 20px var(--accent-text2));
+            }
+
+            @include big-mobile {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    &__content-text {
+        font-style: italic;
+        @include adaptive-font(13, 10);
+        text-align: right;
+        color: var(--general-text2);
+        max-width: 100px;
+    }
+
+    &__content-img {
+        @include transform(115%, 30%, 20deg);
+        pointer-events: none;
+    }
+
+    &__content-animation {
+        position: relative;
+
+        @include big-mobile {
+            height: 300px;
+            width: 300px;
+        }
+
+        @include medium-mobile {
+            height: 200px;
+        }
+    }
+
+    &__animation-inner {
+        @include medium-tablet {
+            transform: scale(0.8);
+        }
+
+        @include big-mobile {
+            transform: translateY(-60px) scale(0.6);
+        }
+
+        @include mobile {
+            transform: translateX(-30px) translateY(-60px) scale(0.6);
+        }
+
+        @include medium-mobile {
+            transform: scale(0.4) translateY(-270px) translateX(-160px);
+        }
+
+        @include small-tablet {}
+    }
+
+    &__animation-text {
+        font-weight: 500;
+        font-size: 14px;
+        background: #F4DDD9;
+        border-radius: 20px;
+        border: 2px solid var(--accent-text3);
+        text-align: center;
+        padding: 10px;
+        width: 120px;
+        height: 90px;
+        position: absolute;
+        top: -150px;
+        left: 400px;
+
+        animation: map-text-move 6s infinite 5.5s;
+
+
+        @include medium-tablet {
+            top: -100px;
+        }
+
+        @include big-mobile {
+            left: 300px;
+        }
+
+        @include medium-mobile {
+            display: none;
+        }
+    }
+
+    &__animation-img {
+        filter: drop-shadow(0px 17px 25px #c88c6175);
+        position: absolute;
+    }
+
+    #map-icon-animation1 {
+        opacity: 0;
+        animation: map-marker 5s infinite 1s;
+        top: 100px;
+        left: 500px;
+    }
+
+    #map-icon-animation2 {
+        opacity: 0;
+        animation: map-marker 5s infinite 2s;
+        top: 200px;
+        left: 100px;
+    }
+
+    #map-icon-animation3 {
+        opacity: 0;
+        animation: map-marker 5s infinite 4s;
+        top: 130px;
+        left: 350px;
+    }
+
+    #map-icon-animation4 {
+        opacity: 0;
+        animation: map-marker 5s infinite 5ms;
+        top: 75px;
+        left: 325px;
+    }
+
+    #map-icon-animation5 {
+        top: 30px;
+        left: 400px;
+        animation: map-marker-move 2s 2s infinite;
+    }
+
+    #map-icon-animation6 {
+        top: 130px;
+        left: 230px;
+        animation: map-marker-move 2s 3s infinite;
+    }
+
+    @keyframes map-text-move {
+        0% {
+            transform: translateY(0%);
+        }
+
+        10% {
+            transform: translateY(10%);
+        }
+
+        20% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes map-marker-move {
+        0% {
+            transform: translateY(0%);
+        }
+
+        50% {
+            transform: translateY(10%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+
+    @keyframes map-marker {
+        0% {
+            opacity: 0;
+            transform: translateY(0%);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translateY(10%);
+        }
+
+        20% {
+            opacity: 0;
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 0;
+        }
+    }
+}
